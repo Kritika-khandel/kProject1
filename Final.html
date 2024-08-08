@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotionCut Project1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c0d8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            width: 600px;
+            max-width: 90%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown button {
+            background-color: #FF00FF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown button:focus {
+            outline: none;
+        }
+
+        .dropdown button::after {
+            content: '▼';
+            font-size: 12px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 5px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+
+        .search-input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 20px;
+        }
+
+        .search-button {
+            background-color: #FF00FF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-button:focus {
+            outline: none;
+        }
+
+        .search-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <div class="dropdown">
+            <button>Everything</button>
+            <div class="dropdown-content">
+                <a href="#">Everything</a>
+                <a href="#">Software Development</a>
+                <a href="#">Web Development</a>
+                <a href="#">Data Analyst</a>
+                <a href="#">IT Consultant</a>
+                <a href="#">Network Administrator</a>
+            </div>
+        </div>
+        <input class="search-input" type="text" placeholder="Search Anything">
+        <button class="search-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search">
+        </button>
+    </div>
+</body>
+</html>
